@@ -1,13 +1,13 @@
 openapi: 3.0.3
 info:
-  title: Tiny Example API 3
-  version: 1.0.1
+  title: Tiny Example API
+  version: 1.0.2
 
 servers:
-  - url: https://api.example.com
+  - url: https://api.example.com/v2
 
 paths:
-  /health1:
+  /health:
     get:
       summary: Health check 5
       responses:
@@ -26,7 +26,7 @@ paths:
 
   /info:
     get:
-      summary: API information in this.
+      summary: API information
       responses:
         "200":
           description: API metadata
