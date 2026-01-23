@@ -7,7 +7,7 @@ servers:
   - url: https://api.example.com
 
 paths:
-  /health:
+  /health1:
     get:
       summary: Health check 5
       responses:
