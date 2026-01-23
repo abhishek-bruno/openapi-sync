@@ -23,23 +23,7 @@ paths:
                 required: [status]
               example:
                 status: ok
-  /health1:
-      get:
-        summary: Health check 5
-        responses:
-          "200":
-            description: OK
-            content:
-              application/json:
-                schema:
-                  type: object
-                  properties:
-                    status:
-                      type: string
-                  required: [status]
-                example:
-                  status: ok
-  /health2:
+  /health-check:
       get:
         summary: Health check 5
         responses:
@@ -58,7 +42,7 @@ paths:
 
   /info:
     get:
-      summary: API information
+      summary: API informations
       responses:
         "200":
           description: API metadata
@@ -73,7 +57,7 @@ paths:
                     type: string
                 required: [name, version]
               example:
-                name: Tiny Example API 3
+                name: Tiny Example API
                 version: 1.0.0
 
   /items:
@@ -110,7 +94,7 @@ paths:
 
   /items/{id}:
     put:
-      summary: Modify an item
+      summary: Modify an items
       parameters:
         - name: id
           in: path
