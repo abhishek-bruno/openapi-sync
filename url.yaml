@@ -23,39 +23,38 @@ paths:
                 required: [status]
               example:
                 status: ok
-
-/health1:
-    get:
-      summary: Health check 5
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                required: [status]
-              example:
-                status: ok
-/health2:
-    get:
-      summary: Health check 5
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                required: [status]
-              example:
-                status: ok
+  /health1:
+      get:
+        summary: Health check 5
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                  required: [status]
+                example:
+                  status: ok
+  /health2:
+      get:
+        summary: Health check 5
+        responses:
+          "200":
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                  required: [status]
+                example:
+                  status: ok
 
   /info:
     get:
