@@ -89,7 +89,7 @@ paths:
       description: Multiple status values can be provided with comma separated strings.
       operationId: findPetsByStatus
       parameters:
-        - name: status
+        - name: statuses
           in: query
           description: Status values that need to be considered for filter
           required: false
