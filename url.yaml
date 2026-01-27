@@ -27,7 +27,7 @@ paths:
       get:
         summary: Health check 5
         parameters:
-        - name: username
+        - name: username1
           in: query
           description: The user name for login
           required: false
