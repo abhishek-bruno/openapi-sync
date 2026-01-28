@@ -439,6 +439,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: password
+          in: path
+          description: name that need to be deleted
+          required: true
+          schema:
+            type: string
       requestBody:
         description: Update an existent user in the store
         content:
@@ -454,32 +460,6 @@ paths:
       responses:
         '200':
           description: successful operation
-        default:
-          description: Unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-    delete:
-      tags:
-        - user
-      summary: Delete user.
-      description: This can only be done by the logged in user.
-      operationId: deleteUser
-      parameters:
-        - name: username
-          in: path
-          description: The name that needs to be deleted
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: successful operation
-        '400':
-          description: Invalid username supplied
-        '404':
-          description: User not found
         default:
           description: Unexpected error
           content:
