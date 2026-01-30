@@ -37,50 +37,6 @@ tags:
   - name: user
     description: Operations about user
 paths:
-  /pet:
-    post:
-      tags:
-        - pet
-      summary: Add a new pet to the store.
-      description: Add a new pet to the store.
-      operationId: addPet
-      requestBody:
-        description: Create a new pet in the store
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Pet'
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/Pet'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/Pet'
-        required: true
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pet'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Pet'
-        '400':
-          description: Invalid input
-        '422':
-          description: Validation exception
-        default:
-          description: Unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-      security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
   /pet/findByStatus:
     get:
       tags:
@@ -89,7 +45,7 @@ paths:
       description: Multiple status values can be provided with comma separated strings.
       operationId: findPetsByStatus
       parameters:
-        - name: status
+        - name: statuses
           in: query
           description: Status values that need to be considered for filter
           required: false
